@@ -48,7 +48,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_ListOrders()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/ListOrdersResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/ListOrdersResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->ListOrders(new Request\ListOrdersRequest);
@@ -125,7 +125,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_ListOrdersAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/ListOrdersResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/ListOrdersResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->ListOrdersAsync(new Request\ListOrdersRequest);
@@ -140,7 +140,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_ListOrdersByNextToken()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/ListOrdersByNextTokenResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/ListOrdersByNextTokenResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->ListOrdersByNextToken(new Request\ListOrdersByNextTokenRequest);
@@ -217,7 +217,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_ListOrdersByNextTokenAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/ListOrdersByNextTokenResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/ListOrdersByNextTokenResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->ListOrdersByNextTokenAsync(new Request\ListOrdersByNextTokenRequest);
@@ -232,7 +232,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_ListOrderItems()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/ListOrderItemsResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/ListOrderItemsResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->ListOrderItems(new Request\ListOrderItemsRequest);
@@ -300,7 +300,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_ListOrderItemsAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/ListOrderItemsResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/ListOrderItemsResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->ListOrderItemsAsync(new Request\ListOrderItemsRequest);
@@ -315,7 +315,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_ListOrderItemsByNextToken()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/ListOrderItemsByNextTokenResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/ListOrderItemsByNextTokenResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->ListOrderItemsByNextToken(new Request\ListOrderItemsByNextTokenRequest);
@@ -383,7 +383,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_ListOrderItemsByNextTokenAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/ListOrderItemsByNextTokenResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/ListOrderItemsByNextTokenResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->ListOrderItemsByNextTokenAsync(new Request\ListOrderItemsByNextTokenRequest);
@@ -398,7 +398,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetOrder()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetOrderResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetOrderResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->GetOrder(new Request\GetOrderRequest);
@@ -469,7 +469,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetOrderAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetOrderResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetOrderResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->GetOrderAsync(new Request\GetOrderRequest);
@@ -484,7 +484,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetServiceStatus()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetServiceStatusResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetServiceStatusResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->GetServiceStatus();
@@ -501,7 +501,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetServiceStatusAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetServiceStatusResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetServiceStatusResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->GetServiceStatusAsync();
@@ -516,7 +516,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_ErrorResponse()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/ErrorResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/ErrorResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         // Calling any method here.

@@ -14,7 +14,12 @@ declare(strict_types=1);
 namespace SellerWorks\Amazon;
 
 use GuzzleHttp\Client as HttpClient;
+use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Promise\PromiseInterface;
+use GuzzleHttp\Psr7\Request;
+use Psr\Http\Message\ResponseInterface;
+use SellerWorks\Amazon\Middleware\TestMiddleware;
 
 class MwsClient
 {
@@ -32,6 +37,41 @@ class MwsClient
     }
 
     /**
+     * @param RequestInterface $request
+     * @return mixed
+     */
+    public function send($request)
+    {
+        return $this->sendAsync($request)->wait();
+    }
+
+    /**
+     * @param RequestInterface $request
+     * @return PromiseInterface
+     */
+    public function sendAsync($request): PromiseInterface
+    {
+        $client = $this->getHttpClient();
+        $request = new Request('GET', 'https://google.com');
+
+        $promise = $client->sendAsync($request)->then(
+            // onFulfilled
+            function (ResponseInterface $response) {
+                $contents = $response->getBody()->getContents();
+//                print_r($contents); die;
+            },
+            // onRejected
+            function (ClientException $exception) {
+                $contents = $exception->getResponse()->getBody()->getContents();
+//                print_r($contents); die;
+            });
+
+        print_r($request); die;
+
+        return $promise;
+    }
+
+    /**
      * @return HttpClient
      */
     private function getHttpClient(): HttpClient
@@ -41,8 +81,10 @@ class MwsClient
 
             $this->httpClient = new HttpClient([
                 'http_errors' => true,
-                'stack'       => $stack,
+                'handler'     => $stack,
             ]);
+
+            $stack->push(new TestMiddleware());
         }
 
         return $this->httpClient;

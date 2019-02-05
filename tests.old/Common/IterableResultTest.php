@@ -55,8 +55,8 @@ class IterableResultTest extends TestCase
      */
     public function test_hydated_iterator()
     {
-        $response1 = file_get_contents(__DIR__.'/Mock/ListOrdersResponse.xml');
-        $response2 = file_get_contents(__DIR__.'/Mock/ListOrdersByNextTokenResponse.xml');
+        $response1 = file_get_contents(__DIR__ . '/Mock/ListOrdersResponse.xml');
+        $response2 = file_get_contents(__DIR__ . '/Mock/ListOrdersByNextTokenResponse.xml');
         $this->stack->append(new Response(200, [], $response1));
         $this->stack->append(new Response(200, [], $response2));
 

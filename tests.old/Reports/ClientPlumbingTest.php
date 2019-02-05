@@ -48,7 +48,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_RequestReport()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/RequestReportResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/RequestReportResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->RequestReport(new Request\RequestReportRequest);
@@ -75,7 +75,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_RequestReportAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/RequestReportResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/RequestReportResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->RequestReportAsync(new Request\RequestReportRequest);
@@ -90,7 +90,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetReportRequestList()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetReportRequestListResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetReportRequestListResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->GetReportRequestList(new Request\GetReportRequestListRequest);
@@ -121,7 +121,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetReportRequestListAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetReportRequestListResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetReportRequestListResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->GetReportRequestListAsync(new Request\GetReportRequestListRequest);
@@ -136,7 +136,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetReportRequestListByNextToken()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetReportRequestListByNextTokenResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetReportRequestListByNextTokenResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->GetReportRequestListByNextToken(new Request\GetReportRequestListByNextTokenRequest);
@@ -167,7 +167,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetReportRequestListByNextTokenAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetReportRequestListByNextTokenResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetReportRequestListByNextTokenResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->GetReportRequestListByNextTokenAsync(new Request\GetReportRequestListByNextTokenRequest);
@@ -182,7 +182,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetReportRequestCount()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetReportRequestCountResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetReportRequestCountResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->GetReportRequestCount(new Request\GetReportRequestCountRequest);
@@ -199,7 +199,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetReportRequestCountAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetReportRequestCountResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetReportRequestCountResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->GetReportRequestCountAsync(new Request\GetReportRequestCountRequest);
@@ -214,7 +214,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_CancelReportRequests()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/CancelReportRequestsResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/CancelReportRequestsResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->CancelReportRequests(new Request\CancelReportRequestsRequest);
@@ -242,7 +242,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_CancelReportRequestsAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/CancelReportRequestsResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/CancelReportRequestsResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->CancelReportRequestsAsync(new Request\CancelReportRequestsRequest);
@@ -257,7 +257,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetReportList()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetReportListResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetReportListResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->GetReportList(new Request\GetReportListRequest);
@@ -284,7 +284,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetReportListAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetReportListResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetReportListResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->GetReportListAsync(new Request\GetReportListRequest);
@@ -299,7 +299,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetReportListByNextToken()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetReportListByNextTokenResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetReportListByNextTokenResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->GetReportListByNextToken(new Request\GetReportListByNextTokenRequest);
@@ -326,7 +326,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetReportListByNextTokenAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetReportListByNextTokenResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetReportListByNextTokenResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->GetReportListByNextTokenAsync(new Request\GetReportListByNextTokenRequest);
@@ -341,7 +341,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetReportCount()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetReportCountResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetReportCountResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->GetReportCount(new Request\GetReportCountRequest);
@@ -358,7 +358,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetReportCountAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetReportCountResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetReportCountResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->GetReportCountAsync(new Request\GetReportCountRequest);
@@ -373,7 +373,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetReport()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetReportResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetReportResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $result = $this->client->GetReport(new Request\GetReportRequest);
@@ -389,7 +389,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_GetReportAsync()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/GetReportResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/GetReportResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         $promise = $this->client->GetReportAsync(new Request\GetReportRequest);
@@ -404,7 +404,7 @@ class ClientPlumbingTest extends TestCase
      */
     public function test_ErrorResponse()
     {
-        $responseXml = file_get_contents(__DIR__.'/Mock/ErrorResponse.xml');
+        $responseXml = file_get_contents(__DIR__ . '/Mock/ErrorResponse.xml');
         $this->stack->append(new Response(200, [], $responseXml));
 
         // Calling any method here.
