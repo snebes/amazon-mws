@@ -40,8 +40,6 @@ class MwsClient
         $response = $this->getHttpClient()->request('GET', 'http://nebes.net', [
             'Action' => 'GetServiceStatus',
         ]);
-
-        print_r($response->getBody()->getContents()); die;
     }
     
     /**

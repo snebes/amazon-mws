@@ -17,12 +17,21 @@ use Psr\Http\Message\RequestInterface;
 
 class MwsAuthTokenMiddleware
 {
-    public function __invoke(callable $next)
+    public function __construct()
     {
-        return function (RequestInterface $request, array $options = []) use ($next) {
+
+    }
+
+    /**
+     * @param callable $handler
+     * @return \Closure
+     */
+    public function __invoke(callable $handler): \Closure
+    {
+        return function (RequestInterface $request, array $options = []) use ($handler) {
             $request = $this->addToken($request);
 
-            return $next($request, $options);
+            return $handler($request, $options);
         };
     }
 
@@ -30,9 +39,10 @@ class MwsAuthTokenMiddleware
     {
         return modify_request($request, [
             'set_headers' => [
-                'AWSAccessKeyId'   => '0PB842EXAMPLE7N4ZTR2',
-                'MWSAuthToken'     => 'amzn.mws.4ea38b7b-f563-7709-4bae-87aeaEXAMPLE',
-                'SellerId'         => 'A1XEXAMPLE5E6',
+                'AWSAccessKeyId'   => '',
+                'MWSAuthToken'     => '',
+                'SellerId'         => '',
+                'Signature'        => '',
                 'SignatureVersion' => '2',
                 'SignatureMethod'  => 'HmacSHA256',
                 'Timestamp'        => \gmdate('Y-m-dTH:i:s'),
